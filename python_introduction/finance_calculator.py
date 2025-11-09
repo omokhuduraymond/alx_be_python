@@ -1,6 +1,6 @@
-monthlyinc = int(input("Enter your monthly income: "))
-totalex = int(input("Enter your total monthly expenses: "))
-monthlysavings = totalex - monthlyinc
-projectsav = monthlysavings * 12 + (monthlysavings * 12 * 0.05)
-print(f"Your monthly savings are ${monthlysavings}")
-print(f"Projectec savings after one year, with interest, is: ${projectsav}")
+monthly_income = float(input("Enter your monthly income: "))
+monthly_expenses = float(input("Enter your total monthly expenses: "))
+monthly_savings = monthly_income - monthly_expenses
+projected_savings = monthly_savings * 12 + (monthly_savings * 12 * 0.05)
+print(f"Your monthly savings are ${monthly_savings}")
+print(f"Projectec savings after one year, with interest, is: ${projected_savings}")
