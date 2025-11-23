@@ -10,41 +10,38 @@ def main():
 
     while True:
         display_menu()
-        
+
         try:
-            choice = (input("Enter your choice: "))
+            choice = int(input("Enter your choice: "))
         except ValueError:
-            print("Invalid input. Please enter a number.\n")
+            print("Invalid choice. Please enter a number.\n")
             continue
 
-        if choice == '1':
-            item = input("Add item to your shopping list: ")
+        if choice == 1:
+            item = input("Enter the item to add: ")   # EXACT STRING REQUIRED
             shopping_list.append(item)
-            print(f"'{item}' added!\n")
+            print(f"{item} added.\n")
 
-        elif choice == '2':
-            item = input("Enter item to remove: ")
+        elif choice == 2:
+            item = input("Enter the item to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
-                print(f"'{item}' removed!\n")
+                print(f"{item} removed.\n")
             else:
-                print("This item cannot be found in your list\n")
+                print("Item not found.\n")
 
-        elif choice == '3':
-            if not shopping_list:
-                print("Your shopping list is empty.\n")
-            else:
-                print("Current List:")
-                for i, item in enumerate(shopping_list, 1):
-                    print(f"{i}. {item}")
-                print()
+        elif choice == 3:
+            print("Current Shopping List:")
+            for item in shopping_list:
+                print(f"- {item}")
+            print()
 
-        elif choice == '4':
+        elif choice == 4:
             print("Goodbye!")
             break
 
         else:
-            print("Invalid choice. Please try again.\n")
+            print("Invalid choice. Try again.\n")
 
 if __name__ == "__main__":
     main()
