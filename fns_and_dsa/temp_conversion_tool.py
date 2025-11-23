@@ -12,7 +12,7 @@ def main():
         try:
             choice = float(input("Enter the temperature to convert: "))
         except ValueError:
-            print("INVALID INPUT.\n")
+            print("Invalid temperature. Please enter a numeric value.\n")
             continue
 
         pace = input("Is this temperature in Celsius or Fahrenheit? (C/F): ").strip().upper()
