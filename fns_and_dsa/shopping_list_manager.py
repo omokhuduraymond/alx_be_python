@@ -12,17 +12,17 @@ def main():
         display_menu()
         
         try:
-            choice = int(input("Enter your choice: "))
+            choice = (input("Enter your choice: "))
         except ValueError:
             print("Invalid input. Please enter a number.\n")
             continue
 
-        if choice == 1:
+        if choice == '1':
             item = input("Add item to your shopping list: ")
             shopping_list.append(item)
             print(f"'{item}' added!\n")
 
-        elif choice == 2:
+        elif choice == '2':
             item = input("Enter item to remove: ")
             if item in shopping_list:
                 shopping_list.remove(item)
@@ -30,7 +30,7 @@ def main():
             else:
                 print("This item cannot be found in your list\n")
 
-        elif choice == 3:
+        elif choice == '3':
             if not shopping_list:
                 print("Your shopping list is empty.\n")
             else:
@@ -39,7 +39,7 @@ def main():
                     print(f"{i}. {item}")
                 print()
 
-        elif choice == 4:
+        elif choice == '4':
             print("Goodbye!")
             break
 
